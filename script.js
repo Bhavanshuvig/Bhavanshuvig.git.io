@@ -1,87 +1,31 @@
 //Program No. 1
 
-//Finding the most frequent item of an array:-
-
-function largest() 
+// program to generate a multiplication table
+function multi()
 {
     console.log("Program No. 1");
-    console.log("Finding the most frequent item of an array");
-  console.log("Array= 3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3" )
-var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
-var mf = 1;
-var m = 0;
-var item;
-for (var i=0; i<arr1.length; i++)
+    console.log("Printing the Multiplication Table:-");
+let number = 15;
+
+console.log(`The Number is: ${number}`);
+//creating a multiplication table
+for(let i = 1; i <= 10; i++) 
 {
-        for (var j=i; j<arr1.length; j++)
-        {
-                if (arr1[i] == arr1[j])
-                 m++;
-                if (mf<m)
-                {
-                  mf=m; 
-                  item = arr1[i];
-                }
-        }
-        m=0;
+    const result = i * number;
+    console.log(`${number} * ${i} = ${result}`);// Printing the result on console
 }
-console.log(item+" ( " +mf +" times ) ") ;
+}
+
+multi(); //calling the function
 
 console.log("**************************************************************"); //separating the Above Program
 
 // Program No. 2
 
-//Finding the Factorial of a number
-
-function factorial() 
-{
-    console.log("Program No. 2");
-    console.log("Finding the Factorial of a number:-");
-let numberForFact = 5, fact=1; //Variables
-
-console.log("Number is: "+numberForFact); //printing The number on console
-
-if(numberForFact === 0) //checking for if the number is equal to zero
-{
-    console.log("Factorial of the number is: 1");
-}
-else{
-for(let i = 1;i<=numberForFact;i++) //logic for finding the factorial of a number
-{
-    fact = fact * i;
-}
-console.log("The Factorial of the number is: "+fact); //printing the result on console
-}
-}
-
-factorial(); //calling the Funtion
-console.log("**************************************************************"); //separating the Above Program
-
-
-// Program No. 3
-
-// Finding the Area of Triangle
-function numberPositive() 
-{
-    console.log("Program No. 3");
-    console.log("Finding the Area of triangle:-");
-    console.log(" Base= 4 and Height = 5")
-const triangel = (b,h) => {
-    let area = (1/2)*b*h;
-    console.log(`5) area of triangel with base= ${b} and Height = ${h} is equal: ${area}`);
-    console.log(" ");
-}
-triangel(4,5);
-
-console.log("**************************************************************"); //separating the Above Program
-
-
-//Program No. 4
-
 // Checking the number is prime or not
 function checkingPrimeNumber()
 {
-    console.log("Program No. 4");
+    console.log("Program No. 2");
     console.log("Checking the number is prime r not:-");
 const checkNumber = 2;
 let isPrime = true;
@@ -125,24 +69,103 @@ checkingPrimeNumber(); //Calling the Function
 
 console.log("**************************************************************"); //separating the Above Program
 
+
+// Program No. 3
+
+// Checking The Number positive, negative or zero
+function numberPositive() 
+{
+    console.log("Program No. 3");
+    console.log("Checking the Number is Positive, Negative or Zero:-");
+let number = -4 //variable
+
+console.log("The Number is: "+number); //printing the number on console
+
+//logic
+if(number === 0) //checking for zero
+{
+    console.log("The Number is Zero");
+}
+
+else if(number>0) //checking for positive number
+{
+    console.log("The Number is Positive");
+}
+
+else //for printing negative if the upper else if statement is false
+{
+    console.log("The Number is Negative");
+}
+}
+
+numberPositive(); //calling the Function
+
+console.log("**************************************************************"); //separating the Above Program
+
+
+//Program No. 4
+
+//Finding the Factorial of a number
+
+function factorial() 
+{
+    console.log("Program No. 4");
+    console.log("Finding the Factorial of a number:-");
+let numberForFact = 5, fact=1; //Variables
+
+console.log("Number is: "+numberForFact); //printing The number on console
+
+if(numberForFact === 0) //checking for if the number is equal to zero
+{
+    console.log("Factorial of the number is: 1");
+}
+else{
+for(let i = 1;i<=numberForFact;i++) //logic for finding the factorial of a number
+{
+    fact = fact * i;
+}
+console.log("The Factorial of the number is: "+fact); //printing the result on console
+}
+}
+
+factorial(); //calling the Funtion
+console.log("**************************************************************"); //separating the Above Program
+
+
+console.log("**************************************************************"); //separating the Above Program
+
 // Program No. 5
 
-// program to generate a multiplication table
-function multi()
+//Finding The Largest Number:-
+
+function largest() 
 {
     console.log("Program No. 5");
-    console.log("Printing the Multiplication Table:-");
-let number = 19;
+    console.log("Finding The Largest Number:-");
+let num1 = 2, num2 = 8, num3 = 5;  //variables
 
-console.log(`The Number is: ${number}`);
-//creating a multiplication table
-for(let i = 1; i <= 10; i++) 
+//printing Numbers to the Console
+console.log("The Numbers are:- "+num1+", "+num2+", "+num3);
+
+//if else statement for Logic
+if (num1>num2 && num1>num3) //checking for num1
 {
-    const result = i * number;
-    console.log(`${number} * ${i} = ${result}`);// Printing the result on console
+    console.log("The Largest Number is: "+ num1);
+
+}
+
+else if (num2>num1 && num2>num3) //checking for num2
+{
+    console.log("The Largest Number is: "+ num2);
+    
+}
+
+else  // here num3 will print if upper else if statement are false
+{
+    console.log("The Largest Number is: "+ num3);
 }
 }
 
-multi(); //calling the function
+largest(); //calling the function
 
 console.log("**************************************************************"); //separating the Above Program
